@@ -12,7 +12,7 @@ app.get("/getAllUsers", async (req, res) => {
 
     return res.send(data);
   } catch (e) {
-    console.error(e);
+    console.log(e);
   }
 });
 

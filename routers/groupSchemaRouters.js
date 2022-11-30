@@ -15,7 +15,7 @@ app.get("/getAllGroups", async (req, res) => {
   }
 });
 
-app.get("/addGroup", async (req, res) => {
+app.prependOnceListener("/addGroup", async (req, res) => {
   try {
     newGroup = new Group(res.body);
 
@@ -28,7 +28,7 @@ app.get("/addGroup", async (req, res) => {
   }
 });
 
-app.get("/deleteGroup", async (req, res) => {
+app.delete("/deleteGroup", async (req, res) => {
   try {
     deletedGroup = new Group(res.body);
 
