@@ -36,6 +36,10 @@ app.use(passport.session());
 require("./utils/auth");
 require("./utils/googleAuth");
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 //register routers
 app.use("", userRouters);
 app.use("", groupRouters);
