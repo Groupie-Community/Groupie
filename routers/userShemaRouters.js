@@ -6,6 +6,7 @@ const app = express();
 
 app.get("/getAllUsers", async (req, res) => {
   try {
+    console.log("getting all users");
     const data = await findAll(User);
     console.log(data);
 
