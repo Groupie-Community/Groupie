@@ -15,7 +15,7 @@ app.get("/getAllUsers", async (req, res) => {
   }
 });
 
-app.get("/addUser", async (req, res) => {
+app.post("/addUser", async (req, res) => {
   try {
     newUser = new User(res.body);
 
@@ -28,7 +28,7 @@ app.get("/addUser", async (req, res) => {
   }
 });
 
-app.get("/deleteUser", async (req, res) => {
+app.delete("/deleteUser", async (req, res) => {
   try {
     deletedUser = new User(res.body);
 
