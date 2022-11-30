@@ -16,7 +16,7 @@ const app = express();
 
 require("./utils/dbUtils");
 
-const PORT = 5000 | process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 // console.info('Initialising request body parser for the server app...');
 // console.info('Extended is set as true to allow browser to stay authenticated as opposed to just with Postman. Source: https://stackoverflow.com/questions/46628069/passport-local-strategy-working-in-postman-but-not-in-browser');
